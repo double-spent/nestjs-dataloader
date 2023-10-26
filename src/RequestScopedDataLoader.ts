@@ -79,10 +79,15 @@ export abstract class RequestScopedDataLoader<Key, Value, CacheKey = Key> extend
 
     const cacheMap = new ProxyCacheMap<CacheKey, Promise<Value>>();
 
-    this.internalDataLoader = new InternalDataLoader<Key, Value | undefined, CacheKey>(this.batchLoad, {
-      ...this.options,
-      cacheMap,
-    });
+    this.internalDataLoader = new InternalDataLoader<Key, Value | undefined, CacheKey>(
+      async (keys) => {
+        return await this.batchLoad(keys);
+      },
+      {
+        ...this.options,
+        cacheMap,
+      },
+    );
 
     return this.internalDataLoader;
   }

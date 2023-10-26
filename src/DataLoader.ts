@@ -65,7 +65,9 @@ export abstract class DataLoader<Key, Value, CacheKey = Key>
       return this.internalDataLoader;
     }
 
-    this.internalDataLoader = new InternalDataLoader<Key, Value | undefined, CacheKey>(this.batchLoad, this.options);
+    this.internalDataLoader = new InternalDataLoader<Key, Value | undefined, CacheKey>(async (keys) => {
+      return await this.batchLoad(keys);
+    }, this.options);
 
     return this.internalDataLoader;
   }
