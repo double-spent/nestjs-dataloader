@@ -1,6 +1,6 @@
 {
-  "name": "nestjs-dataloader",
-  "version": "0.0.0",
+  "name": "@double-spent/nestjs-dataloader",
+  "version": "0.1.0-pre.0",
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -40,7 +40,6 @@
     "nest-request-context": "^1.0.0",
     "ts-jest": "^29.1.1",
     "tsup": "^7.2.0",
-    "turbo": "^1.10.16",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {

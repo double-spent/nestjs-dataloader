@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "pre",
+  "initialVersions": {
+    "nestjs-dataloader": "0.0.0"
+  },
+  "changesets": ["rude-dots-whisper", "small-cats-develop"]
+}
