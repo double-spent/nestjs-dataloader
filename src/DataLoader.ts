@@ -15,7 +15,7 @@ export abstract class DataLoader<Key, Value, CacheKey = Key>
   /** @inheritdoc */
   public name: string | null;
 
-  private internalDataLoader: InternalDataLoader<Key, Value | undefined, CacheKey> | null = null;
+  protected internalDataLoader: InternalDataLoader<Key, Value | undefined, CacheKey> | null = null;
 
   public constructor(protected readonly options?: InternalDataLoader.Options<Key, Value | undefined, CacheKey>) {}
 
