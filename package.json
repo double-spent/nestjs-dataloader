@@ -1,6 +1,6 @@
 {
   "name": "@double-spent/nestjs-dataloader",
-  "version": "0.1.0-pre.1",
+  "version": "0.1.0",
   "description": "A dataloader implementation for NestJS including request-scoped cache and more",
   "license": "MIT",
   "main": "./dist/index.js",
